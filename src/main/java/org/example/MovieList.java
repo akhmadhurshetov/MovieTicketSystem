@@ -13,16 +13,21 @@ public class MovieList {
 
     // Constructor
     public MovieList(String image, String title, String shortDescription, String longDescription,
-                     boolean isActive, double price, String location, double rating) {
+                     boolean isActive, double price, String location, double rating, int id) {
         this.image = image;
-            this.title = title;
+        this.title = title;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
         this.isActive = isActive;
         this.price = price;
         this.location = location;
         this.rating = rating;
+        this.id = id;
     }
+
+    public MovieList(int id, String title, String location, double price) {
+    }
+
 
     // Getters and Setters
     public String getImage() {
@@ -36,7 +41,6 @@ public class MovieList {
     public int getId() {
         return id;
     }
-
     public String getTitle() {
         return title;
     }
@@ -91,6 +95,11 @@ public class MovieList {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return this.title;
     }
 
 }

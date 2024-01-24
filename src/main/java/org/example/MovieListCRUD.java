@@ -44,8 +44,9 @@ public class MovieListCRUD {
                         rs.getBoolean("isActive"),
                         rs.getDouble("price"),
                         rs.getString("location"),
-                        rs.getDouble("rating")
-                );
+                        rs.getDouble("rating"),
+                        rs.getInt("id")
+                                );
                 movies.add(movie);
             }
         } catch (SQLException e) {
@@ -101,7 +102,9 @@ public class MovieListCRUD {
                         rs.getBoolean("isActive"),
                         rs.getDouble("price"),
                         rs.getString("location"),
-                        rs.getDouble("rating")
+                        rs.getDouble("rating"),
+                        rs.getInt("id")
+
                 );
             }
         } catch (SQLException e) {

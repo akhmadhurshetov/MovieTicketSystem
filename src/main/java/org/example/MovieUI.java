@@ -64,9 +64,9 @@ public class MovieUI extends Application {
 
             // Now, open the MovieUI window again
             try {
-                BookingConfirmationUI bookingConfirmationUI = new BookingConfirmationUI();
+                TicketUI ticketUI = new TicketUI();
                 Stage stage = new Stage();
-                bookingConfirmationUI.start(stage); // Start the MovieUI scene on a new stage
+                ticketUI.start(stage); // Start the MovieUI scene on a new stage
             } catch (Exception ex) {
                 ex.printStackTrace();
             }

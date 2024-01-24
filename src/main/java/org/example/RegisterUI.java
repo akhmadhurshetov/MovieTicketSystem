@@ -108,6 +108,7 @@ public class RegisterUI extends Application {
             // Here you can implement logic to switch to the login screen or another screen upon successful registration
         });
 
+
         Scene scene = new Scene(grid, 400, 400);
         registerStage.setScene(scene);
         registerStage.show();

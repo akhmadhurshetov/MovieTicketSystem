@@ -1,60 +1,66 @@
 package org.example;
 
+import java.time.LocalDate;
+
 public class Ticket {
-    private int ticketId;
-    private int customerId; // Reference to Customer
-    private int screeningId; // Reference to Screening
-    private int seatId; // Reference to Seat
-    private double price;
+    private int movieId;
+    private LocalDate date;
+    private String time;
+    private int numberOfTickets;
+    private double totalPrice;
 
     // Constructor
-    public Ticket(int ticketId, int customerId, int screeningId, int seatId, double price) {
-        this.ticketId = ticketId;
-        this.customerId = customerId;
-        this.screeningId = screeningId;
-        this.seatId = seatId;
-        this.price = price;
+    public Ticket(int movieId, LocalDate date, String time, int numberOfTickets, double totalPrice) {
+        this.movieId = movieId;
+        this.date = date;
+        this.time = time;
+        this.numberOfTickets = numberOfTickets;
+        this.totalPrice = totalPrice;
     }
 
-    // Getters and Setters
-    public int getTicketId() {
-        return ticketId;
+    // Getters
+    public int getMovieId() {
+        return movieId;
     }
 
-    public void setTicketId(int ticketId) {
-        this.ticketId = ticketId;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public String getTime() {
+        return time;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public int getNumberOfTickets() {
+        return numberOfTickets;
     }
 
-    public int getScreeningId() {
-        return screeningId;
+    public double getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setScreeningId(int screeningId) {
-        this.screeningId = screeningId;
+    // Setters
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
     }
 
-    public int getSeatId() {
-        return seatId;
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
-    public void setSeatId(int seatId) {
-        this.seatId = seatId;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public double getPrice() {
-        return price;
+    public void setNumberOfTickets(int numberOfTickets) {
+        this.numberOfTickets = numberOfTickets;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
+
+
+
+    // ... (Other methods, if any)
 }
-

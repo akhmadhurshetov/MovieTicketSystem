@@ -70,6 +70,8 @@ public class MovieListUI extends Application {
     }
 
     private void exploreMovie(MovieList movie) {
+        MovieBookingApp movieBookingApp = new MovieBookingApp();
+        movieBookingApp.start(new Stage());
         System.out.println("Exploring movie: " + movie.getTitle());
     }
 
