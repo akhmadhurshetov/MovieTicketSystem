@@ -14,7 +14,7 @@ import java.sql.*;
 
 public class LoginUI extends Application {
 
-    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/users";
+    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/movieticketsystem";
     private static final String DATABASE_USER = "root";
     private static final String DATABASE_PASSWORD = "";
 
@@ -29,7 +29,7 @@ public class LoginUI extends Application {
     }
 
     private Customer authenticateUser(String username, String password) {
-        String sql = "SELECT * FROM customers WHERE username = ? AND password = ?"; // Update with your actual table and column names
+        String sql = "SELECT * FROM user_detail WHERE username = ? AND password = ?"; // Update with your actual table and column names
 
         try (Connection conn = connectToDB();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -94,7 +94,8 @@ public class LoginUI extends Application {
             Customer customer = authenticateUser(username, pwd);
 
             if (customer != null) {
-                // Redirect to new class (e.g., new MainUI().start(new Stage());)
+                MovieListUI movieListUI = new MovieListUI();
+                movieListUI.start(new Stage());
                 System.out.println("Login successful for user: " + customer.getName());
             } else {
                 // Show error message

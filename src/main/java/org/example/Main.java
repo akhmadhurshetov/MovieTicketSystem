@@ -4,16 +4,9 @@ package org.example;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        MovieList newMovie = new MovieList("https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/05/film-poster-design.png", "Movie Title", "Short description", "Long description", true, 9.99, "Location", 4.5);
+        MovieListCRUD.addMovie(newMovie);
+//        int movieId = 123;
+//        MovieListCRUD.deleteMovie(movieId);
     }
 }
